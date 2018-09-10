@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="LMS SQL Server Scripts">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="JUDYLL060807:Judyll060807\Judyll">
+          <Created>2011-04-07T16:55:26.4365403+08:00</Created>
+          <Type>SQL</Type>
+          <Server>JUDYLL060807</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="LMS ( 01 ) Server SolutionS SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JUDYLL060807:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JUDYLL060807</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>LMS ( 01 ) Server SolutionS SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="LMS Server Solution Schema, Login, Users SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JUDYLL060807:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JUDYLL060807</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>LMS Server Solution Schema, Login, Users SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="LMS Server Solution Schema, Login, Users SQL (Reformat and Attachment).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JUDYLL060807:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JUDYLL060807</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>LMS Server Solution Schema, Login, Users SQL (Reformat and Attachment).sql</FullPath>
+        </FileNode>
+        <FileNode Name="LMS ( 03 ) Person Triggers and Procedures Dependent to Other Tables SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JUDYLL060807:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JUDYLL060807</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>LMS ( 03 ) Person Triggers and Procedures Dependent to Other Tables SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="LMS ( 02 ) Member Solutions SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JUDYLL060807:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JUDYLL060807</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>LMS ( 02 ) Member Solutions SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="LMS ( 04 ) Loan Solutions SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JUDYLL060807:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JUDYLL060807</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>LMS ( 04 ) Loan Solutions SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="LMS ( 05 ) Cashier Solutions SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JUDYLL060807:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JUDYLL060807</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>LMS ( 05 ) Cashier Solutions SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="LMS ( 06 ) Accounting Solutions SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JUDYLL060807:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JUDYLL060807</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>LMS ( 06 ) Accounting Solutions SQL.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>
