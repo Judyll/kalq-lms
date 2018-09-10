@@ -1,0 +1,292 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C109E49F-164E-4EDD-9A8C-BC890B19BB51}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DisbursementVoucherServices</RootNamespace>
+    <AssemblyName>dvsvc</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="bssvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Base Solution\BaseServices\bin\Release\bssvc.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="rclnt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Server Solution\Server DLL\rclnt.dll</HintPath>
+    </Reference>
+    <Reference Include="rslib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Server Solution\Server DLL\rslib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassDisbursementVoucherServices\BaseForm\BankInformation.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\BaseForm\BankInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\BaseForm\BankInformation.Designer.cs">
+      <DependentUpon>BankInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\BaseForm\DisbursementManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\BaseForm\DisbursementManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\BaseForm\DisbursementManager.Designer.cs">
+      <DependentUpon>DisbursementManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\BaseForm\DisbursementVoucher.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\BaseForm\DisbursementVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\BaseForm\DisbursementVoucher.Designer.cs">
+      <DependentUpon>DisbursementVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\BaseForm\VoucherEntry.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\BaseForm\VoucherEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\BaseForm\VoucherEntry.Designer.cs">
+      <DependentUpon>VoucherEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\CrystalReport\CrystalDisbursementVoucher.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalDisbursementVoucher.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DataSet\DisbursementVoucherDataSet.cs">
+      <DependentUpon>DisbursementVoucherDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DataSet\DisbursementVoucherDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DisbursementVoucherDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DerivedClass\DisbursementVoucherLogic.cs" />
+    <Compile Include="ClassDisbursementVoucherServices\DerivedForm\BankInformationCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DerivedForm\BankInformationCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DerivedForm\BankInformationUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DerivedForm\BankInformationUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DerivedForm\CostCenterSearchOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DerivedForm\CostCenterSearchOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DerivedForm\DisbursementPayeeSearchOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DerivedForm\DisbursementPayeeSearchOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DerivedForm\DisbursementSearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DerivedForm\DisbursementSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DerivedForm\DisbursementVoucherRecord.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DerivedForm\DisbursementVoucherRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DerivedForm\SearchBankInformationOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DerivedForm\SearchBankInformationOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DerivedForm\VoucherEntryCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DerivedForm\VoucherEntryCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DerivedForm\VoucherEntryUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassDisbursementVoucherServices\DerivedForm\VoucherEntryUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClassDisbursementVoucherServices\BaseForm\BankInformation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BankInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassDisbursementVoucherServices\BaseForm\DisbursementManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DisbursementManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassDisbursementVoucherServices\BaseForm\DisbursementVoucher.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DisbursementVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassDisbursementVoucherServices\BaseForm\VoucherEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VoucherEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassDisbursementVoucherServices\CrystalReport\CrystalDisbursementVoucher.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalDisbursementVoucher.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassDisbursementVoucherServices\DerivedForm\BankInformationCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BankInformationCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassDisbursementVoucherServices\DerivedForm\BankInformationUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BankInformationUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassDisbursementVoucherServices\DerivedForm\CostCenterSearchOnTextBoxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CostCenterSearchOnTextBoxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassDisbursementVoucherServices\DerivedForm\DisbursementPayeeSearchOnTextBoxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DisbursementPayeeSearchOnTextBoxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassDisbursementVoucherServices\DerivedForm\DisbursementSearchList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DisbursementSearchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassDisbursementVoucherServices\DerivedForm\DisbursementVoucherRecord.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DisbursementVoucherRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassDisbursementVoucherServices\DerivedForm\SearchBankInformationOnTextBoxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SearchBankInformationOnTextBoxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassDisbursementVoucherServices\DerivedForm\VoucherEntryCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VoucherEntryCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassDisbursementVoucherServices\DerivedForm\VoucherEntryUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VoucherEntryUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDisbursementVoucherServices\DataSet\DisbursementVoucherDataSet.xsc">
+      <DependentUpon>DisbursementVoucherDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClassDisbursementVoucherServices\DataSet\DisbursementVoucherDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DisbursementVoucherDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ClassDisbursementVoucherServices\DataSet\DisbursementVoucherDataSet.xss">
+      <DependentUpon>DisbursementVoucherDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

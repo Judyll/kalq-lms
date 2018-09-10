@@ -1,0 +1,400 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{58DBEF53-3C5F-413B-B0DB-F46F75853706}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CashieringServices</RootNamespace>
+    <AssemblyName>fssvc</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="bssvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Base Solution\BaseServices\bin\Release\bssvc.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="rclnt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Server Solution\Server DLL\rclnt.dll</HintPath>
+    </Reference>
+    <Reference Include="rslib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Server Solution\Server DLL\rslib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassCashieringManager\BaseForm\BillingStatement.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\BillingStatement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\BillingStatement.Designer.cs">
+      <DependentUpon>BillingStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\BreakDownBankDeposit.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\BreakDownBankDeposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\BreakDownBankDeposit.Designer.cs">
+      <DependentUpon>BreakDownBankDeposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CashieringManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CashieringManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CashieringManager.Designer.cs">
+      <DependentUpon>CashieringManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CashReceiptReportControl.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CashReceiptReportControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CashReceiptReportControl.Designer.cs">
+      <DependentUpon>CashReceiptReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\InHouseHospitalizationMultiplePayment.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\InHouseHospitalizationMultiplePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\InHouseHospitalizationMultiplePayment.Designer.cs">
+      <DependentUpon>InHouseHospitalizationMultiplePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\MemberTab.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\MemberTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\MemberTab.Designer.cs">
+      <DependentUpon>MemberTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\MiscellaneousIncome.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\MiscellaneousIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\MiscellaneousIncome.Designer.cs">
+      <DependentUpon>MiscellaneousIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\RegularLoadPayment.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\RegularLoadPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\RegularLoadPayment.Designer.cs">
+      <DependentUpon>RegularLoadPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\RegularLoanMultiplePayment.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\RegularLoanMultiplePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\RegularLoanMultiplePayment.Designer.cs">
+      <DependentUpon>RegularLoanMultiplePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\ShareCapitalMultiplePayment.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\ShareCapitalMultiplePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\ShareCapitalMultiplePayment.Designer.cs">
+      <DependentUpon>ShareCapitalMultiplePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalBillingStatement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalBillingStatement.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalCashReceiptDetailsReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalCashReceiptDetailsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalCashReceiptSummarized.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalCashReceiptSummarized.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalSubBillingStatement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubBillingStatement.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalSubBreakDownDetails.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubBreakDownDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalSubBreakDownSummarized.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubBreakDownSummarized.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalSubCashReceiptDetails.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubCashReceiptDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalSubCashReceiptsSummarized.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubCashReceiptsSummarized.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DataSet\CashieringDataSet.cs">
+      <DependentUpon>CashieringDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DataSet\CashieringDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CashieringDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedClass\CashieringLogic.cs" />
+    <Compile Include="ClassCashieringManager\DerivedForm\BreakDownBankDepositCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\BreakDownBankDepositCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\BreakDownBankDepositUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\BreakDownBankDepositUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\MemberEmployeeSearchOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\MemberEmployeeSearchOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\MemberSearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\MemberSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\RegularLoanSearchOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\RegularLoanSearchOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\BillingStatement.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BillingStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\BreakDownBankDeposit.resx">
+      <DependentUpon>BreakDownBankDeposit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\CashieringManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CashieringManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\CashReceiptReportControl.resx">
+      <DependentUpon>CashReceiptReportControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\InHouseHospitalizationMultiplePayment.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InHouseHospitalizationMultiplePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\MemberTab.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MemberTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\MiscellaneousIncome.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MiscellaneousIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\RegularLoadPayment.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegularLoadPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\RegularLoanMultiplePayment.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegularLoanMultiplePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\ShareCapitalMultiplePayment.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShareCapitalMultiplePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalBillingStatement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalBillingStatement.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalCashReceiptDetailsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalCashReceiptDetailsReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalCashReceiptSummarized.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalCashReceiptSummarized.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalSubBillingStatement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubBillingStatement.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalSubBreakDownDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubBreakDownDetails.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalSubBreakDownSummarized.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubBreakDownSummarized.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalSubCashReceiptDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubCashReceiptDetails.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalSubCashReceiptsSummarized.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubCashReceiptsSummarized.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\DerivedForm\BreakDownBankDepositCreate.resx">
+      <DependentUpon>BreakDownBankDepositCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\DerivedForm\BreakDownBankDepositUpdate.resx">
+      <DependentUpon>BreakDownBankDepositUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\DerivedForm\MemberEmployeeSearchOnTextBoxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MemberEmployeeSearchOnTextBoxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\DerivedForm\MemberSearchList.resx">
+      <DependentUpon>MemberSearchList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\DerivedForm\RegularLoanSearchOnTextBoxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegularLoanSearchOnTextBoxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassCashieringManager\DataSet\CashieringDataSet.xsc">
+      <DependentUpon>CashieringDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClassCashieringManager\DataSet\CashieringDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CashieringDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ClassCashieringManager\DataSet\CashieringDataSet.xss">
+      <DependentUpon>CashieringDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

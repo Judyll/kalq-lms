@@ -1,0 +1,192 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DAA9D11F-6C79-44B7-88C0-1367097F7141}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LoanManagementSolution</RootNamespace>
+    <AssemblyName>lms</AssemblyName>
+    <ApplicationIcon>Calculator.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adsvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Administrator Solutions\AdministratorServices\bin\Release\adsvc.dll</HintPath>
+    </Reference>
+    <Reference Include="atsvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Accounting Solutions\AccountingServices\AccountingServices\bin\Release\atsvc.dll</HintPath>
+    </Reference>
+    <Reference Include="bssvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Base Solution\BaseServices\bin\Release\bssvc.dll</HintPath>
+    </Reference>
+    <Reference Include="dvsvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Accounting Solutions\DisbursementVoucherServices\DisbursementVoucherServices\bin\Release\dvsvc.dll</HintPath>
+    </Reference>
+    <Reference Include="fssvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Finance Solution\CashieringServices\CashieringServices\bin\Release\fssvc.dll</HintPath>
+    </Reference>
+    <Reference Include="mssrv, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Member Solution\MemberServices\bin\Release\mssrv.dll</HintPath>
+    </Reference>
+    <Reference Include="rclnt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Server Solution\Server DLL\rclnt.dll</HintPath>
+    </Reference>
+    <Reference Include="rslib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Server Solution\Server DLL\rslib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseClass\Enums.cs" />
+    <Compile Include="BaseClass\ProcessInstance.cs" />
+    <Compile Include="BaseClass\User32.cs" />
+    <Compile Include="BaseClass\UserInstance.cs" />
+    <Compile Include="ClassLMSManager\LMSManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassLMSManager\LMSManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassLMSManager\LMSManager.Designer.cs">
+      <DependentUpon>LMSManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassLogInManager\SystemLogIn.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassLogInManager\SystemLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassLogInManager\SystemLogIn.Designer.cs">
+      <DependentUpon>SystemLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClassLMSManager\LMSManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LMSManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassLogInManager\SystemLogIn.resx">
+      <DependentUpon>SystemLogIn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LaST %28Cobalt%29 Run.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secrecy-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\softwareD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbol-Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\membermanagerhover.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chartofaccounts.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chartofaccountshover.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disbursementboucherhover.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\membermanager.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disbursementboucher.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Calculator.ico" />
+    <Content Include="personal-loan.ico" />
+    <None Include="Resources\membermanagerhover.png" />
+    <None Include="Resources\chartofaccounts.png" />
+    <None Include="Resources\chartofaccountshover.png" />
+    <None Include="Resources\disbursementvoucher.png" />
+    <None Include="Resources\disbursementvoucherhover.png" />
+    <None Include="Resources\membermanager.png" />
+    <None Include="Resources\lmsIconCashieringManagerHover.png" />
+    <None Include="Resources\lmsIconCashieringManager.png" />
+    <None Include="Resources\memberManagerDisabled.png" />
+    <None Include="Resources\chartOfAccountDisabled.png" />
+    <None Include="Resources\disbursementVoucherDisabled.png" />
+    <None Include="Resources\lmsIconCashieringManagerDisabled.png" />
+    <Content Include="vault.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

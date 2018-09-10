@@ -1,0 +1,29 @@
+
+
+Class Member Services
+
+
+	Collateral Information Create		504, 58
+	Collateral Information view Update	504, 58
+
+	Co-Maker Information Create		483, 58
+	Co-Maker Information View Update	483, 58
+
+	Loan Amortization Create		483, 58
+	Loan Amortization View Update		483, 58
+
+	Loan Additions Create			365, 58
+	Loan Additions View Update		365, 58
+
+	Loan Charge Create			365, 58
+	Loan Charge View Update			365, 58
+
+	Regular Loan Information Create		994, 58
+	Regular Loan Information View Update	994, 58
+
+
+Side Panels
+	
+	Collateral Information			161, 25
+	Services				161, 25
+	

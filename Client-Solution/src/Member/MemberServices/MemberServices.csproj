@@ -1,0 +1,782 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E248D24-8C81-486A-BB6E-A5C97D5BB1C7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MemberServices</RootNamespace>
+    <AssemblyName>mssrv</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="bssvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Base Solution\BaseServices\bin\Release\bssvc.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="rclnt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Server Solution\Server DLL\rclnt.dll</HintPath>
+    </Reference>
+    <Reference Include="rslib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Server Solution\Server DLL\rslib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassMemberServices\BaseForm\CollateralInformation.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\CollateralInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\CollateralInformation.Designer.cs">
+      <DependentUpon>CollateralInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\CoMakerInformation.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\CoMakerInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\CoMakerInformation.Designer.cs">
+      <DependentUpon>CoMakerInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\HospitalizationDebit.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\HospitalizationDebit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\HospitalizationDebit.Designer.cs">
+      <DependentUpon>HospitalizationDebit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\HospitalizationExcludeCoverage.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\HospitalizationExcludeCoverage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\HospitalizationExcludeCoverage.Designer.cs">
+      <DependentUpon>HospitalizationExcludeCoverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\HospitalizationIncludeCoverage.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\HospitalizationIncludeCoverage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\HospitalizationIncludeCoverage.Designer.cs">
+      <DependentUpon>HospitalizationIncludeCoverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\InHouseExcludeCoverage.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\InHouseExcludeCoverage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\InHouseExcludeCoverage.Designer.cs">
+      <DependentUpon>InHouseExcludeCoverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\InHouseIncludeCoverage.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\InHouseIncludeCoverage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\InHouseIncludeCoverage.Designer.cs">
+      <DependentUpon>InHouseIncludeCoverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\LoanAmortization.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\LoanAmortization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\LoanAmortization.Designer.cs">
+      <DependentUpon>LoanAmortization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\LoanCalculator.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\LoanCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\LoanCalculator.Designer.cs">
+      <DependentUpon>LoanCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\MembersEquity.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\MembersEquity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\MembersEquity.Designer.cs">
+      <DependentUpon>MembersEquity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\OtherCreditorInformation.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\OtherCreditorInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\OtherCreditorInformation.Designer.cs">
+      <DependentUpon>OtherCreditorInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\RegularLoanAdditions.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\RegularLoanAdditions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\RegularLoanAdditions.Designer.cs">
+      <DependentUpon>RegularLoanAdditions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\RegularLoanCharges.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\RegularLoanCharges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\RegularLoanCharges.Designer.cs">
+      <DependentUpon>RegularLoanCharges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\MemberManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\MemberManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\MemberManager.Designer.cs">
+      <DependentUpon>MemberManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\RegularLoanInformation.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\RegularLoanInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\RegularLoanInformation.Designer.cs">
+      <DependentUpon>RegularLoanInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\ShareCapitalCredit.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\ShareCapitalCredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\BaseForm\ShareCapitalCredit.Designer.cs">
+      <DependentUpon>ShareCapitalCredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMemberServices\CrystalReport\CrystalInHouseHospitalization.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalInHouseHospitalization.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\CrystalReport\CrystalLoanCalculator.cs">
+      <DependentUpon>CrystalLoanCalculator.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ClassMemberServices\CrystalReport\CrystalRegularLoanChargesAmortization.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalRegularLoanChargesAmortization.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\CrystalReport\CrystalStatementOfAccount.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalStatementOfAccount.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\CrystalReport\CrystalSubAmortization.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubAmortization.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\CrystalReport\CrystalSubComputationVoucher.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubComputationVoucher.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\CrystalReport\CrystalSubRegularLoanChargesAdditionDetails.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubRegularLoanChargesAdditionDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DataSet\RegularLoanDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegularLoanDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedClass\LoanLogic.cs" />
+    <Compile Include="ClassMemberServices\DerivedClass\MemberLogic.cs" />
+    <Compile Include="ClassMemberServices\DerivedForm\CollateralInformationCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\CollateralInformationCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\CollateralInformationUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\CollateralInformationUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\CoMakerInformationCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\CoMakerInformationCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\CoMakerInformationUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\CoMakerInformationUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\CoMakerSearchOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\CoMakerSearchOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\HospitalizationDebitRecord.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\HospitalizationDebitRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\HospitalizationDebitUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\HospitalizationDebitUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\HospitalizationExcludeCoverageCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\HospitalizationExcludeCoverageCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\HospitalizationExcludeCoverageUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\HospitalizationExcludeCoverageUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\HospitalizationExcludeSearchedOnTextBoxLis.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\HospitalizationExcludeSearchedOnTextBoxLis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\HospitalizationIncludeCoverageCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\HospitalizationIncludeCoverageCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\HospitalizationIncludeCoverageUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\HospitalizationIncludeCoverageUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\HospitalizationIncludeSearchedOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\HospitalizationIncludeSearchedOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\InHouseExcludeCoverageCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\InHouseExcludeCoverageCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\InHouseExcludeCoverageUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\InHouseExcludeCoverageUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\InHouseIncludeCoverageCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\InHouseIncludeCoverageCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\InHouseIncludeCoverageUpate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\InHouseIncludeCoverageUpate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\LoanAdditionsSearchOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\LoanAdditionsSearchOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\LoanAmortizationCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\LoanAmortizationCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\LoanAmortizationUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\LoanAmortizationUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\LoanChargesSearchOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\LoanChargesSearchOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\MemberInformation.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\MemberInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\MemberInformationCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\MemberInformationCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\MemberInformationUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\MemberInformationUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\MemberSearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\MemberSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\MembersEquityCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\MembersEquityCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\MembersEquityUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\MembersEquityUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\OtherCreditorInformationCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\OtherCreditorInformationCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\OtherCreditorInformationUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\OtherCreditorInformationUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\RegularLoanAdditionsCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\RegularLoanAdditionsCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\RegularLoanAdditionsUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\RegularLoanAdditionsUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\RegularLoanChargesCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\RegularLoanChargesCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\RegularLoanChargesUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\RegularLoanChargesUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\RegularLoanCollateralSearchOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\RegularLoanCollateralSearchOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\RegularLoanInformationRecord.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\RegularLoanInformationRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\ShareCapitalCreditCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\ShareCapitalCreditCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\ShareCapitalCreditUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMemberServices\DerivedForm\ShareCapitalCreditUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClassMemberServices\BaseForm\CollateralInformation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CollateralInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\BaseForm\CoMakerInformation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CoMakerInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\BaseForm\HospitalizationDebit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HospitalizationDebit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\BaseForm\HospitalizationExcludeCoverage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HospitalizationExcludeCoverage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\BaseForm\HospitalizationIncludeCoverage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HospitalizationIncludeCoverage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\BaseForm\InHouseExcludeCoverage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InHouseExcludeCoverage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\BaseForm\InHouseIncludeCoverage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InHouseIncludeCoverage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\BaseForm\LoanAmortization.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoanAmortization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\BaseForm\LoanCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoanCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\BaseForm\MembersEquity.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MembersEquity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\BaseForm\OtherCreditorInformation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OtherCreditorInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\BaseForm\RegularLoanAdditions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegularLoanAdditions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\BaseForm\RegularLoanCharges.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegularLoanCharges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\BaseForm\MemberManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MemberManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\BaseForm\RegularLoanInformation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegularLoanInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\BaseForm\ShareCapitalCredit.resx">
+      <DependentUpon>ShareCapitalCredit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\CrystalReport\CrystalInHouseHospitalization.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalInHouseHospitalization.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\CrystalReport\CrystalLoanCalculator.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalLoanCalculator.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\CrystalReport\CrystalRegularLoanChargesAmortization.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalRegularLoanChargesAmortization.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\CrystalReport\CrystalStatementOfAccount.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalStatementOfAccount.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\CrystalReport\CrystalSubAmortization.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubAmortization.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\CrystalReport\CrystalSubComputationVoucher.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubComputationVoucher.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\CrystalReport\CrystalSubRegularLoanChargesAdditionDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubRegularLoanChargesAdditionDetails.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\CollateralInformationCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CollateralInformationCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\CollateralInformationUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CollateralInformationUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\CoMakerInformationCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CoMakerInformationCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\CoMakerInformationUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CoMakerInformationUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\CoMakerSearchOnTextBoxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CoMakerSearchOnTextBoxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\HospitalizationDebitRecord.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HospitalizationDebitRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\HospitalizationDebitUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HospitalizationDebitUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\HospitalizationExcludeCoverageCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HospitalizationExcludeCoverageCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\HospitalizationExcludeCoverageUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HospitalizationExcludeCoverageUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\HospitalizationExcludeSearchedOnTextBoxLis.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HospitalizationExcludeSearchedOnTextBoxLis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\HospitalizationIncludeCoverageCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HospitalizationIncludeCoverageCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\HospitalizationIncludeCoverageUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HospitalizationIncludeCoverageUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\HospitalizationIncludeSearchedOnTextBoxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HospitalizationIncludeSearchedOnTextBoxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\InHouseExcludeCoverageCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InHouseExcludeCoverageCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\InHouseExcludeCoverageUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InHouseExcludeCoverageUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\InHouseIncludeCoverageCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InHouseIncludeCoverageCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\InHouseIncludeCoverageUpate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InHouseIncludeCoverageUpate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\LoanAdditionsSearchOnTextBoxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoanAdditionsSearchOnTextBoxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\LoanAmortizationCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoanAmortizationCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\LoanAmortizationUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoanAmortizationUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\LoanChargesSearchOnTextBoxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoanChargesSearchOnTextBoxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\MemberInformation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MemberInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\MemberInformationCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MemberInformationCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\MemberInformationUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MemberInformationUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\MemberSearchList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MemberSearchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\MembersEquityCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MembersEquityCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\MembersEquityUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MembersEquityUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\OtherCreditorInformationCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OtherCreditorInformationCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\OtherCreditorInformationUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OtherCreditorInformationUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\RegularLoanAdditionsCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegularLoanAdditionsCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\RegularLoanAdditionsUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegularLoanAdditionsUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\RegularLoanChargesCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegularLoanChargesCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\RegularLoanChargesUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegularLoanChargesUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\RegularLoanCollateralSearchOnTextBoxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegularLoanCollateralSearchOnTextBoxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\RegularLoanInformationRecord.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegularLoanInformationRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\ShareCapitalCreditCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShareCapitalCreditCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMemberServices\DerivedForm\ShareCapitalCreditUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShareCapitalCreditUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassMemberServices\DataSet\RegularLoanDataSet.xsc">
+      <DependentUpon>RegularLoanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClassMemberServices\DataSet\RegularLoanDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RegularLoanDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ClassMemberServices\DataSet\RegularLoanDataSet.xss">
+      <DependentUpon>RegularLoanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Member Information_hover.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Member Information.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services_hover.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lmsHospitalization_hover.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lmsHospitalization.JPG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
